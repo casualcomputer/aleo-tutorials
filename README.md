@@ -1,8 +1,134 @@
-# 🏗️ Aleo Tutorial Project Structure
+# Aleo Tutorial Project
 
-This document explains the organization of the Aleo tutorial project and where each component should be placed for maximum educational value.
+A comprehensive Next.js application designed to teach Aleo blockchain development through interactive tutorials and seamless wallet integration.
 
-## 📁 Directory Structure
+![Main Dashboard](app_ui.png)
+
+## 🎯 What You'll Learn
+
+This project provides hands-on experience with Aleo blockchain development, covering everything from wallet connections to smart contract deployment. Built with Next.js 15, React 18, and the official Aleo SDK, it offers a complete learning environment for blockchain developers.
+
+## 🖥️ User Interface Overview
+
+### Main Dashboard
+
+The application features a clean, modern interface with intuitive navigation and professional Aleo branding. The dashboard provides easy access to all tutorials while maintaining a consistent user experience throughout.
+
+### Tutorial 1: Wallet Connection
+
+**Master the fundamentals of Aleo wallet integration**
+
+![Wallet Connection Interface](docs/images/tutorial1.png)
+
+**What you'll accomplish:**
+
+- Connect to multiple Aleo wallets (Puzzle, Leo, Fox, Soter)
+- Debug wallet detection issues in real-time
+- Monitor connection status with live indicators
+- Understand the technical architecture behind wallet integration
+
+**Interactive features:**
+
+```jsx
+// Real-time wallet status display
+Debug Information Panel:
+✅ Wallets detected: 2
+✅ Puzzle Wallet: Available
+❌ Leo Wallet: Not detected
+✅ Connection status: Connected
+🔑 Public key: aleo1xxx...
+```
+
+### Tutorial 2: Account Generation
+
+**Learn secure account creation and management**
+
+![Account Generation Interface](docs/images/tutorial2.png)
+
+**Key learning outcomes:**
+
+- Generate cryptographically secure private keys using Web Workers
+- Create new Aleo accounts with proper address derivation
+- Implement secure local storage for account management
+- Follow industry best practices for key security
+
+### Tutorial 3: Program Execution
+
+**Execute your first Aleo programs**
+
+![Program Execution Interface](docs/images/tutorial3.png)
+
+**Hands-on experience with:**
+
+- Running Aleo programs with custom inputs
+- Using the built-in Leo program editor
+- Understanding Web Worker integration for performance
+- Generating and verifying cryptographic proofs
+
+### Tutorial 4: Contract Deployment
+
+**Deploy smart contracts to the Aleo network**
+
+![Contract Deployment Interface](docs/images/tutorial4.png)
+
+**Professional deployment workflow:**
+
+- Deploy smart contracts to Aleo's testnet and mainnet
+- Calculate and manage deployment fees
+- Select appropriate networks for different use cases
+- Track deployment status and transaction confirmations
+
+### Tutorial 5: Transaction History
+
+**Monitor and analyze blockchain transactions**
+
+![Transaction History Interface](docs/images/tutorial5.png)
+
+**Comprehensive transaction management:**
+
+- View detailed transaction history
+- Analyze transaction details and execution status
+- Monitor fee usage and gas consumption
+- Integrate with Aleo's block explorer
+
+## 🎨 Design Philosophy
+
+### Intuitive Navigation
+
+The application features a sophisticated dark-themed sidebar that provides:
+
+- Clear tutorial progression with visual indicators
+- Smooth animations and hover effects
+- Responsive design that works on all devices
+- Quick access to home and tutorial sections
+
+### Educational Focus
+
+Every tutorial includes expandable technical sections that reveal:
+
+```jsx
+🔧 Technical Deep Dive - Understanding the Implementation
+├── 🏗️ Component Architecture Flow
+├── 💡 Key Concepts and Dependencies
+├── 📝 Real Code Examples
+└── 🎓 Step-by-Step Explanations
+```
+
+### Real-Time Feedback
+
+The interface provides immediate feedback through:
+
+```jsx
+Status Indicators:
+├── 🟢 Connected: Wallet successfully linked
+├── 🟡 Connecting: Connection in progress
+├── 🔴 Disconnected: No active wallet connection
+└── ⚠️ Error: Detailed error information with solutions
+```
+
+## 🛠️ Technical Architecture
+
+### Project Structure
 
 ```
 aleo-project/
