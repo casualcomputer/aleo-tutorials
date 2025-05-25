@@ -73,10 +73,40 @@ export default function Tutorial2() {
             <h2 style={{ color: '#1a1a1a', marginBottom: '15px', fontSize: '28px' }}>
                 Tutorial 2: Generate Account
             </h2>
-            <p style={{ color: '#666', fontSize: '16px', marginBottom: '25px' }}>
+            <p style={{ color: '#666', fontSize: '16px', marginBottom: '15px' }}>
                 Learn how to create secure Aleo accounts using the official SDK. Each account contains 
                 four essential components: private key, view key, compute key, and address.
             </p>
+
+            {/* Documentation Reference */}
+            <div style={{
+                marginBottom: '25px',
+                padding: '15px',
+                backgroundColor: '#e7f3ff',
+                border: '1px solid #b3d9ff',
+                borderRadius: '8px',
+                borderLeft: '4px solid #007bff'
+            }}>
+                <div style={{ display: 'flex', alignItems: 'center', marginBottom: '8px' }}>
+                    <span style={{ fontSize: '18px', marginRight: '8px' }}>📚</span>
+                    <strong style={{ color: '#0056b3' }}>Official Documentation</strong>
+                </div>
+                <p style={{ margin: 0, fontSize: '14px', color: '#0056b3' }}>
+                    For complete details on account creation and key management, see the{' '}
+                    <a 
+                        href="https://docs.explorer.provable.com/docs/sdk/ghweubjq0or1x-creating-accounts"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            color: '#0056b3',
+                            textDecoration: 'underline',
+                            fontWeight: 'bold'
+                        }}
+                    >
+                        Aleo SDK Account Creation Guide
+                    </a>
+                </p>
+            </div>
 
             {/* Code Example */}
             <div style={{
@@ -87,9 +117,27 @@ export default function Tutorial2() {
                 borderRadius: '10px',
                 fontFamily: 'monospace'
             }}>
-                <h4 style={{ color: '#495057', marginBottom: '15px', fontFamily: 'inherit' }}>
-                    📝 SDK Implementation:
-                </h4>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
+                    <h4 style={{ color: '#495057', margin: 0, fontFamily: 'inherit' }}>
+                        📝 SDK Implementation:
+                    </h4>
+                    <a 
+                        href="https://docs.explorer.provable.com/docs/sdk/ghweubjq0or1x-creating-accounts"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            fontSize: '12px',
+                            color: '#007bff',
+                            textDecoration: 'none',
+                            padding: '4px 8px',
+                            backgroundColor: '#e7f3ff',
+                            borderRadius: '4px',
+                            border: '1px solid #b3d9ff'
+                        }}
+                    >
+                        📖 View Docs
+                    </a>
+                </div>
                 <pre style={{ 
                     margin: 0, 
                     fontSize: '14px', 
@@ -417,6 +465,7 @@ const address = account.address();`}
                     Each component serves a specific purpose in Aleo's privacy-preserving blockchain architecture.
                 </p>
             </div>
+
         </div>
     );
 } 
