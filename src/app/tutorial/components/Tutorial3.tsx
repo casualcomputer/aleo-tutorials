@@ -14,7 +14,9 @@ export default function Tutorial3() {
 
     useEffect(() => {
         try {
-            workerRef.current = new Worker(new URL("../../../components/workers/AleoWorker.js", import.meta.url));
+            workerRef.current = new Worker(
+                new URL("../../../components/workers/Tutorial3Worker.js", import.meta.url)
+            );
             workerRef.current.onmessage = (
                 event: MessageEvent<AleoWorkerMessageEvent>
             ) => {
@@ -29,18 +31,21 @@ export default function Tutorial3() {
                 alert("Worker error: " + error.message);
             };
         } catch (error) {
-            console.error("Failed to create worker:", error);
-            alert("Failed to create worker: " + error);
+            console.error("Failed to create Tutorial 3 worker:", error);
         }
         return () => {
             workerRef.current?.terminate();
         };
     }, []);
 
-    const execute = async () => {
+    const executeProgram = async () => {
         setExecuting(true);
         setExecutionResult(null);
-        workerRef.current?.postMessage("execute");
+        workerRef.current?.postMessage({ 
+            type: "executeSample",
+            programName: "hello",
+            inputs: ["5u32", "5u32"]
+        });
     };
 
     return (
@@ -55,7 +60,7 @@ export default function Tutorial3() {
             <div style={{textAlign: 'center', margin: '30px 0'}}>
                 <button 
                     disabled={executing} 
-                    onClick={execute}
+                    onClick={executeProgram}
                     style={{
                         padding: '15px 30px',
                         fontSize: '16px',
